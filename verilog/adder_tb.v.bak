@@ -1,0 +1,27 @@
+module adder_tb();
+	reg clk;
+	reg [7:0] a;
+	reg [11:0] b;
+	wire [11:0] out;
+	
+	adder uut (
+		.clk (clk),
+		.a (a),
+		.b (b),
+		.out (out)
+		);
+	
+	always
+		#5 clk = ~clk;
+	
+	initial begin
+			a = 8'd1; b = 12'd2;
+		#10; a = 8'd3; b = 12'd3;
+		#10; a = 8'd; b = 12'd;
+		#10; a = 8'd; b = 12'd;
+		#10; a = 8'd; b = 12'd;
+		#10; a = 8'd; b = 12'd;
+		#10; $stop;
+	end
+	
+endmodule

@@ -1,0 +1,33 @@
+module my_ram (
+   input             clk,
+	input					rst,
+	input					sw,
+   input [3:0]      	raddr,
+	input [3:0] 		waddr,
+   input [3:0]       din,
+   input             we,
+   output reg [3:0]  dout
+   );
+   
+   reg [3:0] arr [0:15];
+	
+	integer i;
+	
+	initial begin
+		for (i = 0; i < 16; i = i+1)
+			arr[i] = 4'b0;
+		dout = 0;
+	end
+	
+	always @(posedge clk) begin
+		if (sw == 0)
+			if (we == 1)
+				arr[waddr] = din;
+		if (sw == 1)
+			dout = arr[raddr];
+		if (rst == 1)
+			for (i = 0; i < 16; i = i+1)
+				arr[i] = 4'b0;
+	end
+   
+endmodule

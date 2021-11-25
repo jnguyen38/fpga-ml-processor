@@ -1,0 +1,605 @@
+Analysis & Synthesis report for system
+Fri Nov 12 12:46:22 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |MLP_top_de2|UART_RX:UART_RX_Inst|r_SM_Main
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: UART_RX:UART_RX_Inst
+ 14. Parameter Settings for Inferred Entity Instance: MLP_top:system|compute:compute_mod|multiplier:mult_rr|lpm_mult:Mult0
+ 15. lpm_mult Parameter Settings by Entity Instance
+ 16. Port Connectivity Checks: "MLP_top:system|display:disp_hex|hexdigit:hex4_display"
+ 17. Port Connectivity Checks: "UART_RX:UART_RX_Inst"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+ 21. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Nov 12 12:46:22 2021       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; system                                      ;
+; Top-level Entity Name              ; MLP_top_de2                                 ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 347                                         ;
+;     Total combinational functions  ; 331                                         ;
+;     Dedicated logic registers      ; 194                                         ;
+; Total registers                    ; 194                                         ;
+; Total pins                         ; 46                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; MLP_top_de2        ; system             ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                             ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------+---------+
+; verilog/UART_RX.v                ; yes             ; User Verilog HDL File        ; G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/UART_RX.v       ;         ;
+; verilog/multiplier.v             ; yes             ; User Verilog HDL File        ; G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/multiplier.v    ;         ;
+; verilog/MLP_top.v                ; yes             ; User Verilog HDL File        ; G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top.v       ;         ;
+; verilog/hexdigit.v               ; yes             ; User Verilog HDL File        ; G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/hexdigit.v      ;         ;
+; verilog/adder.v                  ; yes             ; User Verilog HDL File        ; G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/adder.v         ;         ;
+; verilog/mux2x1.v                 ; yes             ; User Verilog HDL File        ; G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/mux2x1.v        ;         ;
+; verilog/my_dff.v                 ; yes             ; User Verilog HDL File        ; G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_dff.v        ;         ;
+; verilog/compute.v                ; yes             ; User Verilog HDL File        ; G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/compute.v       ;         ;
+; verilog/debounce.v               ; yes             ; User Verilog HDL File        ; G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/debounce.v      ;         ;
+; verilog/my_rom.v                 ; yes             ; User Verilog HDL File        ; G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_rom.v        ;         ;
+; verilog/my_ram.v                 ; yes             ; User Verilog HDL File        ; G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_ram.v        ;         ;
+; verilog/display.v                ; yes             ; User Verilog HDL File        ; G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/display.v       ;         ;
+; verilog/MLP_top_de2.v            ; yes             ; User Verilog HDL File        ; G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_de2.v   ;         ;
+; verilog/count_control.v          ; yes             ; User Verilog HDL File        ; G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/count_control.v ;         ;
+; verilog/edge_detect.v            ; yes             ; User Verilog HDL File        ; G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/edge_detect.v   ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf                      ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                    ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc                   ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.inc                      ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/bypassff.inc                      ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift.inc                      ;         ;
+; db/mult_j8t.tdf                  ; yes             ; Auto-Generated Megafunction  ; G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/db/mult_j8t.tdf         ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 347            ;
+;                                             ;                ;
+; Total combinational functions               ; 331            ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 157            ;
+;     -- 3 input functions                    ; 107            ;
+;     -- <=2 input functions                  ; 67             ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 275            ;
+;     -- arithmetic mode                      ; 56             ;
+;                                             ;                ;
+; Total registers                             ; 194            ;
+;     -- Dedicated logic registers            ; 194            ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 46             ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 104            ;
+; Total fan-out                               ; 1661           ;
+; Average fan-out                             ; 2.69           ;
++---------------------------------------------+----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                            ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                       ; Entity Name   ; Library Name ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------+---------------+--------------+
+; |MLP_top_de2                             ; 331 (0)             ; 194 (0)                   ; 0           ; 0            ; 0       ; 0         ; 46   ; 0            ; |MLP_top_de2                                                                                              ; MLP_top_de2   ; work         ;
+;    |MLP_top:system|                      ; 277 (0)             ; 163 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MLP_top_de2|MLP_top:system                                                                               ; MLP_top       ; work         ;
+;       |compute:compute_mod|              ; 66 (0)              ; 57 (13)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MLP_top_de2|MLP_top:system|compute:compute_mod                                                           ; compute       ; work         ;
+;          |adder:add_rr|                  ; 12 (12)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MLP_top_de2|MLP_top:system|compute:compute_mod|adder:add_rr                                              ; adder         ; work         ;
+;          |multiplier:mult_rr|            ; 30 (0)              ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MLP_top_de2|MLP_top:system|compute:compute_mod|multiplier:mult_rr                                        ; multiplier    ; work         ;
+;             |lpm_mult:Mult0|             ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MLP_top_de2|MLP_top:system|compute:compute_mod|multiplier:mult_rr|lpm_mult:Mult0                         ; lpm_mult      ; work         ;
+;                |mult_j8t:auto_generated| ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MLP_top_de2|MLP_top:system|compute:compute_mod|multiplier:mult_rr|lpm_mult:Mult0|mult_j8t:auto_generated ; mult_j8t      ; work         ;
+;          |mux2x1:mux_in|                 ; 12 (12)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MLP_top_de2|MLP_top:system|compute:compute_mod|mux2x1:mux_in                                             ; mux2x1        ; work         ;
+;          |my_dff:dff_rr|                 ; 12 (12)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MLP_top_de2|MLP_top:system|compute:compute_mod|my_dff:dff_rr                                             ; my_dff        ; work         ;
+;       |count_control:controller|         ; 21 (21)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MLP_top_de2|MLP_top:system|count_control:controller                                                      ; count_control ; work         ;
+;       |debounce:db_rst|                  ; 21 (21)             ; 21 (21)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MLP_top_de2|MLP_top:system|debounce:db_rst                                                               ; debounce      ; work         ;
+;       |display:disp_hex|                 ; 44 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MLP_top_de2|MLP_top:system|display:disp_hex                                                              ; display       ; work         ;
+;          |hexdigit:hex0_display|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MLP_top_de2|MLP_top:system|display:disp_hex|hexdigit:hex0_display                                        ; hexdigit      ; work         ;
+;          |hexdigit:hex1_display|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MLP_top_de2|MLP_top:system|display:disp_hex|hexdigit:hex1_display                                        ; hexdigit      ; work         ;
+;          |hexdigit:hex2_display|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MLP_top_de2|MLP_top:system|display:disp_hex|hexdigit:hex2_display                                        ; hexdigit      ; work         ;
+;          |hexdigit:hex6_display|         ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MLP_top_de2|MLP_top:system|display:disp_hex|hexdigit:hex6_display                                        ; hexdigit      ; work         ;
+;          |hexdigit:hex7_display|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MLP_top_de2|MLP_top:system|display:disp_hex|hexdigit:hex7_display                                        ; hexdigit      ; work         ;
+;       |edge_detect:dv_det|               ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MLP_top_de2|MLP_top:system|edge_detect:dv_det                                                            ; edge_detect   ; work         ;
+;       |my_ram:ram16x4|                   ; 121 (121)           ; 68 (68)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MLP_top_de2|MLP_top:system|my_ram:ram16x4                                                                ; my_ram        ; work         ;
+;       |my_rom:rom16x8|                   ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MLP_top_de2|MLP_top:system|my_rom:rom16x8                                                                ; my_rom        ; work         ;
+;    |UART_RX:UART_RX_Inst|                ; 54 (54)             ; 31 (31)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MLP_top_de2|UART_RX:UART_RX_Inst                                                                         ; UART_RX       ; work         ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |MLP_top_de2|UART_RX:UART_RX_Inst|r_SM_Main                                                                                    ;
++--------------------------+-------------------------+--------------------------+--------------------------+---------------+---------------------+
+; Name                     ; r_SM_Main.s_RX_STOP_BIT ; r_SM_Main.s_RX_DATA_BITS ; r_SM_Main.s_RX_START_BIT ; r_SM_Main.000 ; r_SM_Main.s_CLEANUP ;
++--------------------------+-------------------------+--------------------------+--------------------------+---------------+---------------------+
+; r_SM_Main.000            ; 0                       ; 0                        ; 0                        ; 0             ; 0                   ;
+; r_SM_Main.s_RX_START_BIT ; 0                       ; 0                        ; 1                        ; 1             ; 0                   ;
+; r_SM_Main.s_RX_DATA_BITS ; 0                       ; 1                        ; 0                        ; 1             ; 0                   ;
+; r_SM_Main.s_RX_STOP_BIT  ; 1                       ; 0                        ; 0                        ; 1             ; 0                   ;
+; r_SM_Main.s_CLEANUP      ; 0                       ; 0                        ; 0                        ; 1             ; 1                   ;
++--------------------------+-------------------------+--------------------------+--------------------------+---------------+---------------------+
+
+
++---------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                        ;
++------------------------------------------------------+--------------------+
+; Register name                                        ; Reason for Removal ;
++------------------------------------------------------+--------------------+
+; UART_RX:UART_RX_Inst|r_SM_Main~2                     ; Lost fanout        ;
+; UART_RX:UART_RX_Inst|r_SM_Main~3                     ; Lost fanout        ;
+; MLP_top:system|count_control:controller|clk_delay[3] ; Lost fanout        ;
+; Total Number of Removed Registers = 3                ;                    ;
++------------------------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 194   ;
+; Number of registers using Synchronous Clear  ; 24    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 89    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; UART_RX:UART_RX_Inst|r_RX_Data         ; 8       ;
+; UART_RX:UART_RX_Inst|r_RX_Data_R       ; 1       ;
+; Total number of inverted registers = 2 ;         ;
++----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MLP_top_de2|MLP_top:system|count_control:controller|count_r[0] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MLP_top_de2|MLP_top:system|my_ram:ram16x4|arr[0][3]            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MLP_top_de2|MLP_top:system|my_ram:ram16x4|arr[1][2]            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MLP_top_de2|MLP_top:system|my_ram:ram16x4|arr[2][0]            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MLP_top_de2|MLP_top:system|my_ram:ram16x4|arr[3][3]            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MLP_top_de2|MLP_top:system|my_ram:ram16x4|arr[4][0]            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MLP_top_de2|MLP_top:system|my_ram:ram16x4|arr[5][0]            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MLP_top_de2|MLP_top:system|my_ram:ram16x4|arr[6][0]            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MLP_top_de2|MLP_top:system|my_ram:ram16x4|arr[7][0]            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MLP_top_de2|MLP_top:system|my_ram:ram16x4|arr[8][2]            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MLP_top_de2|MLP_top:system|my_ram:ram16x4|arr[9][0]            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MLP_top_de2|MLP_top:system|my_ram:ram16x4|arr[10][1]           ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MLP_top_de2|MLP_top:system|my_ram:ram16x4|arr[11][3]           ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MLP_top_de2|MLP_top:system|my_ram:ram16x4|arr[12][3]           ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MLP_top_de2|MLP_top:system|my_ram:ram16x4|arr[13][3]           ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MLP_top_de2|MLP_top:system|my_ram:ram16x4|arr[14][3]           ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MLP_top_de2|MLP_top:system|my_ram:ram16x4|arr[15][1]           ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; Yes        ; |MLP_top_de2|UART_RX:UART_RX_Inst|r_Clock_Count[1]              ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |MLP_top_de2|MLP_top:system|my_ram:ram16x4|dout[3]              ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |MLP_top_de2|UART_RX:UART_RX_Inst|r_Bit_Index                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_RX:UART_RX_Inst ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; CLKS_PER_BIT   ; 5208  ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: MLP_top:system|compute:compute_mod|multiplier:mult_rr|lpm_mult:Mult0 ;
++------------------------------------------------+--------------+-------------------------------------------------------+
+; Parameter Name                                 ; Value        ; Type                                                  ;
++------------------------------------------------+--------------+-------------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                                        ;
+; LPM_WIDTHA                                     ; 4            ; Untyped                                               ;
+; LPM_WIDTHB                                     ; 4            ; Untyped                                               ;
+; LPM_WIDTHP                                     ; 8            ; Untyped                                               ;
+; LPM_WIDTHR                                     ; 8            ; Untyped                                               ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                                               ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped                                               ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                                               ;
+; LATENCY                                        ; 0            ; Untyped                                               ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                               ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped                                               ;
+; USE_EAB                                        ; OFF          ; Untyped                                               ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped                                               ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                               ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                               ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                                   ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                               ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                               ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                               ;
+; CBXI_PARAMETER                                 ; mult_j8t     ; Untyped                                               ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                               ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                               ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                               ;
++------------------------------------------------+--------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                                               ;
++---------------------------------------+----------------------------------------------------------------------+
+; Name                                  ; Value                                                                ;
++---------------------------------------+----------------------------------------------------------------------+
+; Number of entity instances            ; 1                                                                    ;
+; Entity Instance                       ; MLP_top:system|compute:compute_mod|multiplier:mult_rr|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 4                                                                    ;
+;     -- LPM_WIDTHB                     ; 4                                                                    ;
+;     -- LPM_WIDTHP                     ; 8                                                                    ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                             ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                                   ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                                                   ;
+;     -- USE_EAB                        ; OFF                                                                  ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                 ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                   ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                   ;
++---------------------------------------+----------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MLP_top:system|display:disp_hex|hexdigit:hex4_display" ;
++----------+-------+----------+-----------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                             ;
++----------+-------+----------+-----------------------------------------------------+
+; in[3..1] ; Input ; Info     ; Stuck at GND                                        ;
++----------+-------+----------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART_RX:UART_RX_Inst"                                                                          ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; o_RX_Byte[7..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 46                          ;
+; cycloneiii_ff         ; 194                         ;
+;     ENA               ; 73                          ;
+;     ENA SCLR          ; 16                          ;
+;     SCLR              ; 8                           ;
+;     plain             ; 97                          ;
+; cycloneiii_lcell_comb ; 338                         ;
+;     arith             ; 56                          ;
+;         2 data inputs ; 37                          ;
+;         3 data inputs ; 19                          ;
+;     normal            ; 282                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 12                          ;
+;         2 data inputs ; 23                          ;
+;         3 data inputs ; 88                          ;
+;         4 data inputs ; 157                         ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 2.59                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Fri Nov 12 12:46:06 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Midterm -c system
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/uart_rx.v
+    Info (12023): Found entity 1: UART_RX File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/UART_RX.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/multiplier.v
+    Info (12023): Found entity 1: multiplier File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/multiplier.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/mlp_top.v
+    Info (12023): Found entity 1: MLP_top File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/hexdigit.v
+    Info (12023): Found entity 1: hexdigit File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/hexdigit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/adder.v
+    Info (12023): Found entity 1: adder File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/adder.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/mlp_top_tb.v
+    Info (12023): Found entity 1: MLP_top_tb File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/mux2x1.v
+    Info (12023): Found entity 1: mux2x1 File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/mux2x1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/my_dff.v
+    Info (12023): Found entity 1: my_dff File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_dff.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/compute.v
+    Info (12023): Found entity 1: compute File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/compute.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/compute_tb.v
+    Info (12023): Found entity 1: compute_tb File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/compute_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/debounce.v
+    Info (12023): Found entity 1: debounce File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/debounce.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/my_rom.v
+    Info (12023): Found entity 1: my_rom File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_rom.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/my_ram.v
+    Info (12023): Found entity 1: my_ram File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_ram.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/display.v
+    Info (12023): Found entity 1: display File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/display.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/display_tb.v
+    Info (12023): Found entity 1: display_tb File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/display_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/mlp_top_de2.v
+    Info (12023): Found entity 1: MLP_top_de2 File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_de2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/count_control.v
+    Info (12023): Found entity 1: count_control File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/count_control.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/count_control_tb.v
+    Info (12023): Found entity 1: count_control_tb File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/count_control_tb.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/edge_detect.v
+    Info (12023): Found entity 1: edge_detect File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/edge_detect.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/adder_tb.v
+    Info (12023): Found entity 1: adder_tb File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/adder_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/my_ram_tb.v
+    Info (12023): Found entity 1: my_ram_tb File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_ram_tb.v Line: 2
+Warning (10229): Verilog HDL Expression warning at multiplier_tb.v(25): truncated literal to match 4 bits File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/multiplier_tb.v Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/multiplier_tb.v
+    Info (12023): Found entity 1: multiplier_tb File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/multiplier_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/my_rom_tb.v
+    Info (12023): Found entity 1: my_rom_tb File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_rom_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/mux2x1_tb.v
+    Info (12023): Found entity 1: mux2x1_tb File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/mux2x1_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/my_dff_tb.v
+    Info (12023): Found entity 1: my_dff_tb File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_dff_tb.v Line: 2
+Warning (10236): Verilog HDL Implicit Net warning at MLP_top.v(36): created implicit net for "DV" File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top.v Line: 36
+Warning (10222): Verilog HDL Parameter Declaration warning at UART_RX.v(23): Parameter Declaration in module "UART_RX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/UART_RX.v Line: 23
+Warning (10222): Verilog HDL Parameter Declaration warning at UART_RX.v(24): Parameter Declaration in module "UART_RX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/UART_RX.v Line: 24
+Warning (10222): Verilog HDL Parameter Declaration warning at UART_RX.v(25): Parameter Declaration in module "UART_RX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/UART_RX.v Line: 25
+Warning (10222): Verilog HDL Parameter Declaration warning at UART_RX.v(26): Parameter Declaration in module "UART_RX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/UART_RX.v Line: 26
+Warning (10222): Verilog HDL Parameter Declaration warning at UART_RX.v(27): Parameter Declaration in module "UART_RX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/UART_RX.v Line: 27
+Info (12127): Elaborating entity "MLP_top_de2" for the top level hierarchy
+Info (12128): Elaborating entity "UART_RX" for hierarchy "UART_RX:UART_RX_Inst" File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_de2.v Line: 22
+Warning (10230): Verilog HDL assignment warning at UART_RX.v(80): truncated value with size 32 to match size of target (16) File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/UART_RX.v Line: 80
+Warning (10230): Verilog HDL assignment warning at UART_RX.v(91): truncated value with size 32 to match size of target (16) File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/UART_RX.v Line: 91
+Warning (10230): Verilog HDL assignment warning at UART_RX.v(102): truncated value with size 32 to match size of target (3) File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/UART_RX.v Line: 102
+Warning (10230): Verilog HDL assignment warning at UART_RX.v(120): truncated value with size 32 to match size of target (16) File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/UART_RX.v Line: 120
+Info (12128): Elaborating entity "MLP_top" for hierarchy "MLP_top:system" File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_de2.v Line: 36
+Info (12128): Elaborating entity "debounce" for hierarchy "MLP_top:system|debounce:db_rst" File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top.v Line: 31
+Info (12128): Elaborating entity "edge_detect" for hierarchy "MLP_top:system|edge_detect:dv_det" File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top.v Line: 37
+Info (12128): Elaborating entity "my_ram" for hierarchy "MLP_top:system|my_ram:ram16x4" File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top.v Line: 50
+Info (12128): Elaborating entity "my_rom" for hierarchy "MLP_top:system|my_rom:rom16x8" File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top.v Line: 58
+Warning (10030): Net "arr.data_a" at my_rom.v(8) has no driver or initial value, using a default initial value '0' File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_rom.v Line: 8
+Warning (10030): Net "arr.waddr_a" at my_rom.v(8) has no driver or initial value, using a default initial value '0' File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_rom.v Line: 8
+Warning (10030): Net "arr.we_a" at my_rom.v(8) has no driver or initial value, using a default initial value '0' File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_rom.v Line: 8
+Info (12128): Elaborating entity "compute" for hierarchy "MLP_top:system|compute:compute_mod" File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top.v Line: 68
+Info (12128): Elaborating entity "multiplier" for hierarchy "MLP_top:system|compute:compute_mod|multiplier:mult_rr" File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/compute.v Line: 23
+Info (12128): Elaborating entity "adder" for hierarchy "MLP_top:system|compute:compute_mod|adder:add_rr" File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/compute.v Line: 30
+Info (12128): Elaborating entity "my_dff" for hierarchy "MLP_top:system|compute:compute_mod|my_dff:dff_rr" File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/compute.v Line: 38
+Info (12128): Elaborating entity "mux2x1" for hierarchy "MLP_top:system|compute:compute_mod|mux2x1:mux_in" File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/compute.v Line: 45
+Info (12128): Elaborating entity "display" for hierarchy "MLP_top:system|display:disp_hex" File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top.v Line: 82
+Info (12128): Elaborating entity "hexdigit" for hierarchy "MLP_top:system|display:disp_hex|hexdigit:hex7_display" File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/display.v Line: 18
+Info (12128): Elaborating entity "count_control" for hierarchy "MLP_top:system|count_control:controller" File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top.v Line: 93
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "MLP_top:system|my_rom:rom16x8|arr" is uninferred due to inappropriate RAM size File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_rom.v Line: 8
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "MLP_top:system|compute:compute_mod|multiplier:mult_rr|Mult0" File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/multiplier.v Line: 13
+Info (12130): Elaborated megafunction instantiation "MLP_top:system|compute:compute_mod|multiplier:mult_rr|lpm_mult:Mult0" File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/multiplier.v Line: 13
+Info (12133): Instantiated megafunction "MLP_top:system|compute:compute_mod|multiplier:mult_rr|lpm_mult:Mult0" with the following parameter: File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/multiplier.v Line: 13
+    Info (12134): Parameter "LPM_WIDTHA" = "4"
+    Info (12134): Parameter "LPM_WIDTHB" = "4"
+    Info (12134): Parameter "LPM_WIDTHP" = "8"
+    Info (12134): Parameter "LPM_WIDTHR" = "8"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_j8t.tdf
+    Info (12023): Found entity 1: mult_j8t File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/db/mult_j8t.tdf Line: 29
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following LCELL buffer node(s):
+        Warning (14320): Synthesized away node "MLP_top:system|compute:compute_mod|multiplier:mult_rr|lpm_mult:Mult0|mult_j8t:auto_generated|le5a[4]" File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/db/mult_j8t.tdf Line: 43
+Info (13014): Ignored 48 buffer(s)
+    Info (13016): Ignored 4 CARRY_SUM buffer(s)
+    Info (13019): Ignored 44 SOFT buffer(s)
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_de2.v Line: 9
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_de2.v Line: 9
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_de2.v Line: 9
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/output_files/system.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 394 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 42 output pins
+    Info (21061): Implemented 348 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 4780 megabytes
+    Info: Processing ended: Fri Nov 12 12:46:22 2021
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:21
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/output_files/system.map.smsg.
+
+

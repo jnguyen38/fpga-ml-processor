@@ -1,0 +1,18 @@
+# Current time Mon Nov 08 02:31:14 2021
+# ModelSim - Intel FPGA Edition Stack Trace
+# Program = vish
+# Id = "2020.1"
+# Version = "2020.02"
+# Date = "Feb 28 2020"
+# Platform = win32pe
+
+Exception c0000005 has occurred at address 61ce2507. Traceback:
+# 0    0x61ce2507: '<unknown (@0x61ce2507)>'
+# 1    0x748c7be5: 'GetClassLongW + 0x495'
+# 2    0x748c39f9: 'GetWindowLongW + 0x269'
+# 3    0x748c38b7: 'GetWindowLongW + 0x127'
+# 4    0x72ea98f9: 'OpenThemeData + 0x2809'
+# 5    0x76056fb4: 'vsnwprintf_l + 0x94'
+StackWalk failed 299
+# End of Stack Trace
+

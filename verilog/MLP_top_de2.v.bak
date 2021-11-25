@@ -1,0 +1,116 @@
+module MLP_top_de2 (
+	input 			CLOCK_50,			// 50 MHz clock			
+	input 			UART_RXD,      	// Keyboard input	
+	input  [0:0]	KEY,
+	input  [0:0] 	SW,
+	output [6:0]	HEX0,
+	output [6:0] 	HEX1,
+	output [6:0] 	HEX2,
+	output [6:0] 	HEX4,
+	output [6:0]	HEX5,
+	output [6:0]	HEX6,
+	output [6:0]	HEX7
+	);
+	
+	// RAM / ROM raddr input
+	reg [3:0] 	count_r;
+	reg [3:0] 	count_w;
+	reg [3:0] 	clk_delay;    // delays the 50 MHz clock up to a factor of 8
+	
+	wire     	w_RX_DV;
+	wire 			rst;
+	wire [3:0]	rom_out;
+	wire [3:0]	ram_out;
+   wire [7:0] 	w_RX_Byte; 
+	wire [11:0] disp_out;
+	 
+	initial begin           
+		clk_delay = 0;       // Initialize clock delay counter so that the clock delay can increment
+		count_r = 0;
+		count_w = 0;
+	end
+	
+   UART_RX #(.CLKS_PER_BIT(2604)) UART_RX_Inst (
+      .i_Clock       (CLOCK_50),
+      .i_RX_Serial   (UART_RXD),
+      .o_RX_DV       (w_RX_DV),
+      .o_RX_Byte     (w_RX_Byte)
+   );
+	
+	debounce db_rst (
+		.CLOCK_50 (clk_delay[1]),
+		.in (~KEY[0]),
+		.out (rst)
+		);	
+
+	// Module takes in 8 bit binary representation of a decimal number from 0-255 and stores the value sequentially in RAM
+	// Also handles count increments depending on which state is passed in to the instance
+	my_ram ram16x4 (
+		.we (w_RX_DV),
+		.rst (rst),
+		.sw (SW[0]),
+		.waddr (count_w),
+		.raddr (count_r),
+		.din (w_RX_Byte[3:0]),
+		.clk (clk_delay[1]),
+		.dout (ram_out)
+		);
+	
+	// Module stores preloaded values and outputs values based on the passed in address
+	my_rom rom16x8 (
+		.raddr (count_r),
+		.clk (clk_delay[1]),
+		.sw (SW[0]),
+		.dout (rom_out)
+		);
+	
+	compute compute_mod (
+		.ram_out (ram_out),
+		.rom_out (rom_out),
+		.clk (clk_delay),
+		.rst (rst),
+		.enable (SW[0]),
+		.display (disp_out)
+		);
+
+	display disp_hex (
+		.disp_out (disp_out),
+		.count_r (count_r),
+		.count_w (count_w),
+		.sw (SW[0]), 
+		.ram_out (ram_out),
+		.hex0 (HEX0),
+		.hex1 (HEX1),
+		.hex2 (HEX2),
+		.hex4 (HEX4),
+		.hex5 (HEX5),
+		.hex6 (HEX6),
+		.hex7 (HEX7)
+		);		
+		
+	always @(posedge CLOCK_50) begin
+		// Increment clk_delay
+		clk_delay <= clk_delay + 4'd1;
+		
+		// Increment count_w with posedge CLOCK_50
+		if (SW[0] == 0)
+			if (w_RX_DV == 1) 
+				if (count_w < 15)
+					count_w <= count_w + 4'b1;
+	end
+	
+	always @(posedge clk_delay[1]) begin
+		// Reset conditional with clk_delay[1]
+		if (rst == 1) begin
+			count_w <= 4'b0;
+			count_r <= 4'b0;
+			end
+			
+		// Increment count_r with clk_delay[1]
+		else if (SW[0] == 1) 
+			if (count_r < count_w)
+				count_r <= count_r + 4'b1;
+				
+	end
+				
+endmodule

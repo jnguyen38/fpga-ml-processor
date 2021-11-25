@@ -1,0 +1,12 @@
+module my_dff(
+	input [19:0] d,
+	input clk,
+	input rst,
+	output reg [19:0] out );
+
+	initial out = 0;
+	
+	always @(posedge clk)
+		out <= d;
+	
+endmodule

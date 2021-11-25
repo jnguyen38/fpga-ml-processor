@@ -1,0 +1,30 @@
+`timescale 1ns/1ns
+module multiplier_tb();
+	reg clk;
+	reg enable;
+	reg [3:0] a;
+	reg [3:0] b;
+	wire [7:0] out;
+	
+	multiplier uut (
+		.clk (clk),
+		.enable (enable),
+		.a (a),
+		.b (b),
+		.out (out)
+		);
+	
+	always
+		#5 clk = ~clk;
+	
+	initial begin
+			a = 4'd1; b = 4'd2; enable = 1; clk = 0;
+		#10; a = 4'd3; b = 4'd3;
+		#10; a = 4'd15; b = 4'd11;
+		#10; a = 4'd7; b = 4'd4;
+		#10; a = 4'd20; b = 4'd5; enable = 0;
+		#10; a = 4'd9; b = 4'd7; enable = 1;
+		#10; $stop;
+	end
+	
+endmodule

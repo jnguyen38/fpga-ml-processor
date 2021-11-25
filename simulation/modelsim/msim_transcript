@@ -1,0 +1,668 @@
+# Reading pref.tcl
+# do system_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+G:/My\ Drive/Sophomore/Fall\ Semester/Logic\ Design/Midterm\ Project/verilog {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/UART_RX.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:46:39 on Nov 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog" G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/UART_RX.v 
+# -- Compiling module UART_RX
+# 
+# Top level modules:
+# 	UART_RX
+# End time: 12:46:39 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/My\ Drive/Sophomore/Fall\ Semester/Logic\ Design/Midterm\ Project/verilog {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/multiplier.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:46:40 on Nov 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog" G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/multiplier.v 
+# -- Compiling module multiplier
+# 
+# Top level modules:
+# 	multiplier
+# End time: 12:46:40 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/My\ Drive/Sophomore/Fall\ Semester/Logic\ Design/Midterm\ Project/verilog {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:46:40 on Nov 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog" G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top.v 
+# -- Compiling module MLP_top
+# 
+# Top level modules:
+# 	MLP_top
+# End time: 12:46:40 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/My\ Drive/Sophomore/Fall\ Semester/Logic\ Design/Midterm\ Project/verilog {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/hexdigit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:46:40 on Nov 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog" G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/hexdigit.v 
+# -- Compiling module hexdigit
+# 
+# Top level modules:
+# 	hexdigit
+# End time: 12:46:41 on Nov 12,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/My\ Drive/Sophomore/Fall\ Semester/Logic\ Design/Midterm\ Project/verilog {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/adder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:46:41 on Nov 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog" G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/adder.v 
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# End time: 12:46:41 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/My\ Drive/Sophomore/Fall\ Semester/Logic\ Design/Midterm\ Project/verilog {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/mux2x1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:46:41 on Nov 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog" G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/mux2x1.v 
+# -- Compiling module mux2x1
+# 
+# Top level modules:
+# 	mux2x1
+# End time: 12:46:41 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/My\ Drive/Sophomore/Fall\ Semester/Logic\ Design/Midterm\ Project/verilog {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_dff.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:46:41 on Nov 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog" G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_dff.v 
+# -- Compiling module my_dff
+# 
+# Top level modules:
+# 	my_dff
+# End time: 12:46:41 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/My\ Drive/Sophomore/Fall\ Semester/Logic\ Design/Midterm\ Project/verilog {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/compute.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:46:41 on Nov 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog" G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/compute.v 
+# -- Compiling module compute
+# 
+# Top level modules:
+# 	compute
+# End time: 12:46:42 on Nov 12,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/My\ Drive/Sophomore/Fall\ Semester/Logic\ Design/Midterm\ Project/verilog {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/debounce.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:46:42 on Nov 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog" G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/debounce.v 
+# -- Compiling module debounce
+# 
+# Top level modules:
+# 	debounce
+# End time: 12:46:42 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/My\ Drive/Sophomore/Fall\ Semester/Logic\ Design/Midterm\ Project/verilog {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_rom.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:46:42 on Nov 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog" G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_rom.v 
+# -- Compiling module my_rom
+# 
+# Top level modules:
+# 	my_rom
+# End time: 12:46:42 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/My\ Drive/Sophomore/Fall\ Semester/Logic\ Design/Midterm\ Project/verilog {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_ram.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:46:42 on Nov 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog" G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_ram.v 
+# -- Compiling module my_ram
+# 
+# Top level modules:
+# 	my_ram
+# End time: 12:46:42 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/My\ Drive/Sophomore/Fall\ Semester/Logic\ Design/Midterm\ Project/verilog {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/display.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:46:43 on Nov 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog" G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/display.v 
+# -- Compiling module display
+# 
+# Top level modules:
+# 	display
+# End time: 12:46:43 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/My\ Drive/Sophomore/Fall\ Semester/Logic\ Design/Midterm\ Project/verilog {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_de2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:46:43 on Nov 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog" G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_de2.v 
+# -- Compiling module MLP_top_de2
+# 
+# Top level modules:
+# 	MLP_top_de2
+# End time: 12:46:43 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/My\ Drive/Sophomore/Fall\ Semester/Logic\ Design/Midterm\ Project/verilog {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/count_control.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:46:43 on Nov 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog" G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/count_control.v 
+# -- Compiling module count_control
+# 
+# Top level modules:
+# 	count_control
+# End time: 12:46:43 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/My\ Drive/Sophomore/Fall\ Semester/Logic\ Design/Midterm\ Project/verilog {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/edge_detect.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:46:43 on Nov 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog" G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/edge_detect.v 
+# -- Compiling module edge_detect
+# 
+# Top level modules:
+# 	edge_detect
+# End time: 12:46:44 on Nov 12,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/adder_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:20:06 on Nov 12,2021
+# vlog -reportprogress 300 -work work G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/adder_tb.v 
+# -- Compiling module adder_tb
+# 
+# Top level modules:
+# 	adder_tb
+# End time: 13:20:06 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:20:13 on Nov 12,2021
+# vlog -reportprogress 300 -work work G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_tb.v 
+# -- Compiling module MLP_top_tb
+# 
+# Top level modules:
+# 	MLP_top_tb
+# End time: 13:20:14 on Nov 12,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/multiplier_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:20:15 on Nov 12,2021
+# vlog -reportprogress 300 -work work G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/multiplier_tb.v 
+# -- Compiling module multiplier_tb
+# 
+# Top level modules:
+# 	multiplier_tb
+# End time: 13:20:16 on Nov 12,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/mux2x1_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:20:17 on Nov 12,2021
+# vlog -reportprogress 300 -work work G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/mux2x1_tb.v 
+# -- Compiling module mux2x1_tb
+# 
+# Top level modules:
+# 	mux2x1_tb
+# End time: 13:20:17 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_dff_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:20:20 on Nov 12,2021
+# vlog -reportprogress 300 -work work G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_dff_tb.v 
+# -- Compiling module my_dff_tb
+# 
+# Top level modules:
+# 	my_dff_tb
+# End time: 13:20:20 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_ram_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:20:21 on Nov 12,2021
+# vlog -reportprogress 300 -work work G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_ram_tb.v 
+# -- Compiling module my_ram_tb
+# 
+# Top level modules:
+# 	my_ram_tb
+# End time: 13:20:22 on Nov 12,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_rom_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:20:23 on Nov 12,2021
+# vlog -reportprogress 300 -work work G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_rom_tb.v 
+# -- Compiling module my_rom_tb
+# 
+# Top level modules:
+# 	my_rom_tb
+# End time: 13:20:23 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_dff_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:20:35 on Nov 12,2021
+# vlog -reportprogress 300 -work work G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_dff_tb.v 
+# -- Compiling module my_dff_tb
+# 
+# Top level modules:
+# 	my_dff_tb
+# End time: 13:20:35 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.my_dff_tb
+# vsim work.my_dff_tb 
+# Start time: 13:20:36 on Nov 12,2021
+# Loading work.my_dff_tb
+# Loading work.my_dff
+add wave -position end sim:/my_dff_tb/uut/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: jnguyen5  Hostname: W-BONZAI13  ProcessID: 18732
+#           Attempting to use alternate WLF file "./wlft9h4fyf".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft9h4fyf
+run -all
+# ** Note: $stop    : G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_dff_tb.v(27)
+#    Time: 60 ns  Iteration: 0  Instance: /my_dff_tb
+# Break in Module my_dff_tb at G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_dff_tb.v line 27
+vlog -work work {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/mux2x1_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:21:34 on Nov 12,2021
+# vlog -reportprogress 300 -work work G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/mux2x1_tb.v 
+# -- Compiling module mux2x1_tb
+# 
+# Top level modules:
+# 	mux2x1_tb
+# End time: 13:21:34 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.mux2x1_tb
+# End time: 13:21:36 on Nov 12,2021, Elapsed time: 0:01:00
+# Errors: 0, Warnings: 2
+# vsim work.mux2x1_tb 
+# Start time: 13:21:36 on Nov 12,2021
+# Loading work.mux2x1_tb
+# Loading work.mux2x1
+add wave -position end sim:/mux2x1_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: jnguyen5  Hostname: W-BONZAI13  ProcessID: 18732
+#           Attempting to use alternate WLF file "./wlftrynd84".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftrynd84
+run -all
+# ** Note: $stop    : G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/mux2x1_tb.v(25)
+#    Time: 60 ns  Iteration: 0  Instance: /mux2x1_tb
+# Break in Module mux2x1_tb at G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/mux2x1_tb.v line 25
+vlog -work work {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/mux2x1_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:22:07 on Nov 12,2021
+# vlog -reportprogress 300 -work work G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/mux2x1_tb.v 
+# -- Compiling module mux2x1_tb
+# 
+# Top level modules:
+# 	mux2x1_tb
+# End time: 13:22:07 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.mux2x1_tb
+# End time: 13:22:09 on Nov 12,2021, Elapsed time: 0:00:33
+# Errors: 0, Warnings: 2
+# vsim work.mux2x1_tb 
+# Start time: 13:22:09 on Nov 12,2021
+# Loading work.mux2x1_tb
+# Loading work.mux2x1
+add wave -position end sim:/mux2x1_tb/uut/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: jnguyen5  Hostname: W-BONZAI13  ProcessID: 18732
+#           Attempting to use alternate WLF file "./wlfta3gfgi".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfta3gfgi
+run -all
+# ** Note: $stop    : G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/mux2x1_tb.v(25)
+#    Time: 60 ns  Iteration: 0  Instance: /mux2x1_tb
+# Break in Module mux2x1_tb at G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/mux2x1_tb.v line 25
+vsim work.multiplier_tb
+# End time: 13:23:28 on Nov 12,2021, Elapsed time: 0:01:19
+# Errors: 0, Warnings: 2
+# vsim work.multiplier_tb 
+# Start time: 13:23:28 on Nov 12,2021
+# Loading work.multiplier_tb
+# Loading work.multiplier
+add wave -position end sim:/multiplier_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: jnguyen5  Hostname: W-BONZAI13  ProcessID: 18732
+#           Attempting to use alternate WLF file "./wlftfh7eby".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftfh7eby
+run -all
+# ** Note: $stop    : G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/multiplier_tb.v(27)
+#    Time: 60 ns  Iteration: 0  Instance: /multiplier_tb
+# Break in Module multiplier_tb at G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/multiplier_tb.v line 27
+vlog -work work {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/multiplier_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:24:04 on Nov 12,2021
+# vlog -reportprogress 300 -work work G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/multiplier_tb.v 
+# -- Compiling module multiplier_tb
+# 
+# Top level modules:
+# 	multiplier_tb
+# End time: 13:24:04 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.multiplier_tb
+# End time: 13:24:08 on Nov 12,2021, Elapsed time: 0:00:40
+# Errors: 0, Warnings: 2
+# vsim work.multiplier_tb 
+# Start time: 13:24:08 on Nov 12,2021
+# Loading work.multiplier_tb
+# Loading work.multiplier
+add wave -position end sim:/multiplier_tb/uut/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: jnguyen5  Hostname: W-BONZAI13  ProcessID: 18732
+#           Attempting to use alternate WLF file "./wlfttmfdgm".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfttmfdgm
+run -all
+# ** Note: $stop    : G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/multiplier_tb.v(27)
+#    Time: 60 ns  Iteration: 0  Instance: /multiplier_tb
+# Break in Module multiplier_tb at G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/multiplier_tb.v line 27
+vsim work.adder_tb
+# End time: 13:25:24 on Nov 12,2021, Elapsed time: 0:01:16
+# Errors: 0, Warnings: 2
+# vsim work.adder_tb 
+# Start time: 13:25:24 on Nov 12,2021
+# Loading work.adder_tb
+# Loading work.adder
+vlog -work work {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/adder_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:25:51 on Nov 12,2021
+# vlog -reportprogress 300 -work work G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/adder_tb.v 
+# -- Compiling module adder_tb
+# 
+# Top level modules:
+# 	adder_tb
+# End time: 13:25:52 on Nov 12,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim work.adder_tb
+# End time: 13:25:54 on Nov 12,2021, Elapsed time: 0:00:30
+# Errors: 0, Warnings: 0
+# vsim work.adder_tb 
+# Start time: 13:25:54 on Nov 12,2021
+# Loading work.adder_tb
+# Loading work.adder
+add wave -position end sim:/adder_tb/uut/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: jnguyen5  Hostname: W-BONZAI13  ProcessID: 18732
+#           Attempting to use alternate WLF file "./wlftik63qd".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftik63qd
+run -all
+# ** Note: $stop    : G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/adder_tb.v(25)
+#    Time: 60 ns  Iteration: 0  Instance: /adder_tb
+# Break in Module adder_tb at G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/adder_tb.v line 25
+vsim work.my_ram_tb
+# End time: 13:28:59 on Nov 12,2021, Elapsed time: 0:03:05
+# Errors: 0, Warnings: 2
+# vsim work.my_ram_tb 
+# Start time: 13:28:59 on Nov 12,2021
+# Loading work.my_ram_tb
+# Loading work.my_ram
+add wave -position end sim:/my_ram_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: jnguyen5  Hostname: W-BONZAI13  ProcessID: 18732
+#           Attempting to use alternate WLF file "./wlft6igf33".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft6igf33
+run -all
+# ** Note: $stop    : G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_ram_tb.v(40)
+#    Time: 180 ns  Iteration: 0  Instance: /my_ram_tb
+# Break in Module my_ram_tb at G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_ram_tb.v line 40
+vlog -work work {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_ram_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:30:41 on Nov 12,2021
+# vlog -reportprogress 300 -work work G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_ram_tb.v 
+# -- Compiling module my_ram_tb
+# 
+# Top level modules:
+# 	my_ram_tb
+# End time: 13:30:42 on Nov 12,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim work.my_ram_tb
+# End time: 13:30:44 on Nov 12,2021, Elapsed time: 0:01:45
+# Errors: 0, Warnings: 2
+# vsim work.my_ram_tb 
+# Start time: 13:30:44 on Nov 12,2021
+# Loading work.my_ram_tb
+# Loading work.my_ram
+add wave -position end sim:/my_ram_tb/uut/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: jnguyen5  Hostname: W-BONZAI13  ProcessID: 18732
+#           Attempting to use alternate WLF file "./wlfte4n357".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfte4n357
+run -all
+# ** Note: $stop    : G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_ram_tb.v(40)
+#    Time: 180 ns  Iteration: 0  Instance: /my_ram_tb
+# Break in Module my_ram_tb at G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_ram_tb.v line 40
+vlog -work work {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_ram_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:33:35 on Nov 12,2021
+# vlog -reportprogress 300 -work work G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_ram_tb.v 
+# -- Compiling module my_ram_tb
+# 
+# Top level modules:
+# 	my_ram_tb
+# End time: 13:33:35 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.my_ram_tb
+# End time: 13:33:42 on Nov 12,2021, Elapsed time: 0:02:58
+# Errors: 0, Warnings: 2
+# vsim work.my_ram_tb 
+# Start time: 13:33:42 on Nov 12,2021
+# Loading work.my_ram_tb
+# Loading work.my_ram
+add wave -position end sim:/my_ram_tb/uut/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: jnguyen5  Hostname: W-BONZAI13  ProcessID: 18732
+#           Attempting to use alternate WLF file "./wlft8znmj0".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft8znmj0
+run -all
+# ** Note: $stop    : G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_ram_tb.v(41)
+#    Time: 144 ns  Iteration: 0  Instance: /my_ram_tb
+# Break in Module my_ram_tb at G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_ram_tb.v line 41
+vlog -work work {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_ram_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:35:09 on Nov 12,2021
+# vlog -reportprogress 300 -work work G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_ram_tb.v 
+# -- Compiling module my_ram_tb
+# 
+# Top level modules:
+# 	my_ram_tb
+# End time: 13:35:09 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.my_ram_tb
+# End time: 13:35:11 on Nov 12,2021, Elapsed time: 0:01:29
+# Errors: 0, Warnings: 2
+# vsim work.my_ram_tb 
+# Start time: 13:35:11 on Nov 12,2021
+# Loading work.my_ram_tb
+# Loading work.my_ram
+add wave -position end sim:/my_ram_tb/uut/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: jnguyen5  Hostname: W-BONZAI13  ProcessID: 18732
+#           Attempting to use alternate WLF file "./wlfthjs381".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfthjs381
+run -all
+# ** Note: $stop    : G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_ram_tb.v(41)
+#    Time: 144 ns  Iteration: 0  Instance: /my_ram_tb
+# Break in Module my_ram_tb at G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_ram_tb.v line 41
+vlog -work work {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:41:24 on Nov 12,2021
+# vlog -reportprogress 300 -work work G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_tb.v 
+# -- Compiling module MLP_top_tb
+# 
+# Top level modules:
+# 	MLP_top_tb
+# End time: 13:41:24 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.MLP_top_tb
+# End time: 13:41:27 on Nov 12,2021, Elapsed time: 0:06:16
+# Errors: 0, Warnings: 2
+# vsim work.MLP_top_tb 
+# Start time: 13:41:27 on Nov 12,2021
+# Loading work.MLP_top_tb
+# Loading work.MLP_top
+# Loading work.debounce
+# Loading work.edge_detect
+# Loading work.my_ram
+# Loading work.my_rom
+# Loading work.compute
+# Loading work.multiplier
+# Loading work.adder
+# Loading work.my_dff
+# Loading work.mux2x1
+# Loading work.display
+# Loading work.hexdigit
+# Loading work.count_control
+add wave -position end sim:/MLP_top_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: jnguyen5  Hostname: W-BONZAI13  ProcessID: 18732
+#           Attempting to use alternate WLF file "./wlftbzc4ee".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftbzc4ee
+run -all
+# ** Note: $stop    : G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_tb.v(46)
+#    Time: 580 ns  Iteration: 0  Instance: /MLP_top_tb
+# Break in Module MLP_top_tb at G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_tb.v line 46
+add wave -position end sim:/MLP_top_tb/uut/*
+run -all
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# ** Note: $stop    : G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_tb.v(46)
+#    Time: 580 ns  Iteration: 0  Instance: /MLP_top_tb
+# Break in Module MLP_top_tb at G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_tb.v line 46
+vlog -vlog01compat -work work {+incdir+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog} {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:48:32 on Nov 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog" G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top.v 
+# -- Compiling module MLP_top
+# 
+# Top level modules:
+# 	MLP_top
+# End time: 13:48:32 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:48:39 on Nov 12,2021
+# vlog -reportprogress 300 -work work G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_tb.v 
+# -- Compiling module MLP_top_tb
+# 
+# Top level modules:
+# 	MLP_top_tb
+# End time: 13:48:39 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.MLP_top_tb
+# End time: 13:48:41 on Nov 12,2021, Elapsed time: 0:07:14
+# Errors: 0, Warnings: 0
+# vsim work.MLP_top_tb 
+# Start time: 13:48:41 on Nov 12,2021
+# Loading work.MLP_top_tb
+# Loading work.MLP_top
+# Loading work.edge_detect
+# Loading work.my_ram
+# Loading work.my_rom
+# Loading work.compute
+# Loading work.multiplier
+# Loading work.adder
+# Loading work.my_dff
+# Loading work.mux2x1
+# Loading work.display
+# Loading work.hexdigit
+# Loading work.count_control
+add wave -position end sim:/MLP_top_tb/uut/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: jnguyen5  Hostname: W-BONZAI13  ProcessID: 18732
+#           Attempting to use alternate WLF file "./wlftc1ms3a".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftc1ms3a
+run -all
+# ** Note: $stop    : G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_tb.v(46)
+#    Time: 580 ns  Iteration: 0  Instance: /MLP_top_tb
+# Break in Module MLP_top_tb at G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_tb.v line 46
+vlog -work work {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:50:17 on Nov 12,2021
+# vlog -reportprogress 300 -work work G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_tb.v 
+# -- Compiling module MLP_top_tb
+# 
+# Top level modules:
+# 	MLP_top_tb
+# End time: 13:50:18 on Nov 12,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim work.MLP_top_tb
+# End time: 13:50:20 on Nov 12,2021, Elapsed time: 0:01:39
+# Errors: 0, Warnings: 2
+# vsim work.MLP_top_tb 
+# Start time: 13:50:20 on Nov 12,2021
+# Loading work.MLP_top_tb
+# Loading work.MLP_top
+# Loading work.edge_detect
+# Loading work.my_ram
+# Loading work.my_rom
+# Loading work.compute
+# Loading work.multiplier
+# Loading work.adder
+# Loading work.my_dff
+# Loading work.mux2x1
+# Loading work.display
+# Loading work.hexdigit
+# Loading work.count_control
+add wave -position end sim:/MLP_top_tb/uut/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: jnguyen5  Hostname: W-BONZAI13  ProcessID: 18732
+#           Attempting to use alternate WLF file "./wlft3mnm3w".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft3mnm3w
+run -all
+# ** Note: $stop    : G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_tb.v(46)
+#    Time: 580 ns  Iteration: 0  Instance: /MLP_top_tb
+# Break in Module MLP_top_tb at G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_tb.v line 46
+vlog -vlog01compat -work work {+incdir+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog} {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:51:48 on Nov 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog" G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top.v 
+# -- Compiling module MLP_top
+# 
+# Top level modules:
+# 	MLP_top
+# End time: 13:51:49 on Nov 12,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -work work {G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:51:50 on Nov 12,2021
+# vlog -reportprogress 300 -work work G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_tb.v 
+# -- Compiling module MLP_top_tb
+# 
+# Top level modules:
+# 	MLP_top_tb
+# End time: 13:51:50 on Nov 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.MLP_top_tb
+# End time: 13:51:53 on Nov 12,2021, Elapsed time: 0:01:33
+# Errors: 0, Warnings: 2
+# vsim work.MLP_top_tb 
+# Start time: 13:51:53 on Nov 12,2021
+# Loading work.MLP_top_tb
+# Loading work.MLP_top
+# Loading work.my_ram
+# Loading work.my_rom
+# Loading work.compute
+# Loading work.multiplier
+# Loading work.adder
+# Loading work.my_dff
+# Loading work.mux2x1
+# Loading work.display
+# Loading work.hexdigit
+# Loading work.count_control
+add wave -position end sim:/MLP_top_tb/uut/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: jnguyen5  Hostname: W-BONZAI13  ProcessID: 18732
+#           Attempting to use alternate WLF file "./wlftrj7hkv".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftrj7hkv
+run -all
+# ** Note: $stop    : G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_tb.v(46)
+#    Time: 580 ns  Iteration: 0  Instance: /MLP_top_tb
+# Break in Module MLP_top_tb at G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_tb.v line 46

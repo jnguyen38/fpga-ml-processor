@@ -1,0 +1,39 @@
+Quartus Prime Archive log --	G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/Midterm.qarlog
+
+Archive:	G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/Midterm.qar
+Date:		Fri Nov 12 14:29:30 2021
+Quartus Prime		20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/Midterm.qpf
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/system.qsf
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/system_assignment_defaults.qdf
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/MLP_top_de2.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/UART_RX.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/adder.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/adder_tb.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/compute.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/compute_tb.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/count_control.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/count_control_tb.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/debounce.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/display.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/display_tb.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/edge_detect.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/hexdigit.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/multiplier.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/multiplier_tb.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/mux2x1.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/mux2x1_tb.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_dff.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_dff_tb.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_ram.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_ram_tb.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_rom.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/my_rom_tb.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/system.v
+G:/My Drive/Sophomore/Fall Semester/Logic Design/Midterm Project/verilog/system_tb.v
+	======= Total: 28 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

@@ -1,0 +1,49 @@
+`timescale 1ns/1ns
+
+module system_tb();
+	reg t_clk;
+	reg  [0:0] t_key;
+	reg  [0:0] t_sw;
+	reg  [3:0] t_RXD;
+	reg 		  DV;
+	wire [6:0] hex0;
+	wire [6:0] hex1;
+	wire [6:0] hex2;
+	wire [6:0] hex4;
+	wire [6:0] hex6;
+	wire [6:0] hex7;
+	
+	system uut (
+		.CLOCK_50 (t_clk),
+		.KEY (t_key),
+		.SW (t_sw),
+		.w_RX_Byte (t_RXD),
+		.w_RX_DV (DV),
+		.HEX0 (hex0),
+		.HEX1 (hex1),
+		.HEX2 (hex2),
+		.HEX4 (hex4),
+		.HEX6 (hex6),
+		.HEX7 (hex7)
+		);
+	
+	always
+		#5 t_clk = ~t_clk;
+	
+	initial begin 
+			  t_key = 1; t_clk = 1; t_sw = 0;
+			  t_RXD = 4'b0001; DV = 1; // 1
+		#10; t_RXD = 4'b0001; DV = 0;
+		#10; t_RXD = 4'b0010; DV = 1; // 2
+		#10; t_RXD = 4'b0010; DV = 0;
+		#10; t_RXD = 4'b0011; DV = 1; // 3
+		#10; t_RXD = 4'b0011; DV = 0;
+		#100; t_RXD = 4'b1000; DV = 1; // 8
+		#10; t_RXD = 4'b1000; DV = 0;
+		#20; t_sw =1; DV = 0;
+
+		
+		#400; $stop;
+	end
+	
+endmodule

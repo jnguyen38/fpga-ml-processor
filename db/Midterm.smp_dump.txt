@@ -1,0 +1,8 @@
+
+State Machine - |MLP_top_de2|UART_RX:UART_RX_Inst|r_SM_Main
+Name r_SM_Main.s_RX_STOP_BIT r_SM_Main.s_RX_DATA_BITS r_SM_Main.s_RX_START_BIT r_SM_Main.000 r_SM_Main.s_CLEANUP 
+r_SM_Main.000 0 0 0 0 0 
+r_SM_Main.s_RX_START_BIT 0 0 1 1 0 
+r_SM_Main.s_RX_DATA_BITS 0 1 0 1 0 
+r_SM_Main.s_RX_STOP_BIT 1 0 0 1 0 
+r_SM_Main.s_CLEANUP 0 0 0 1 1 

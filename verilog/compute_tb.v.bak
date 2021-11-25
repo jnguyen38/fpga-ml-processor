@@ -1,0 +1,9 @@
+`timescale 1ns/1ns
+module compute_tb();
+	reg [3:0] ram_out;
+	reg [3:0] rom_out;
+	reg [3:0] clk;
+	reg 		 data_rx;
+	wire [11:0] display;
+	
+	

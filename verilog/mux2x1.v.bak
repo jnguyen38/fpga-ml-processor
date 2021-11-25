@@ -1,0 +1,13 @@
+module mux2x1 (
+	input [19:0] a,
+	input [19:0] b,
+	input 		sel,
+	input 		clk,
+	output reg [19:0] out
+	);
+	
+	initial a = 0;
+	
+	always @(posedge clk)
+		if (sel == 0)
+			

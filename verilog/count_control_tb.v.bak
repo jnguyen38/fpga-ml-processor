@@ -1,0 +1,10 @@
+module count_control();
+	reg CLOCK_50;
+   reg w_RX_DV;
+   reg rst;
+   reg [0:0] SW;
+   wire reg [3:0] clk_delay;
+   wire reg [3:0] count_w;
+   wire reg [3:0] count_r; 
+	
+	
